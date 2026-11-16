@@ -14,7 +14,8 @@ O projeto está sendo construído de forma incremental e versionada no GitHub pa
 
 ✅ Versão 1.0 — Estrutura Semântica (HTML5 Puro) [CONCLUÍDA]
 
-O que fizemos: Construção de todo o esqueleto da página utilizando HTML5 semântico (<header>, <nav>, <main>, <section>, <article>, <footer>), priorizando a acessibilidade para leitores de tela.
+O que fizemos: Construção de todo o esqueleto da página utilizando HTML5 semântico 
+(<header>, <nav>, <main>, <section>, <article>, <footer>), priorizando a acessibilidade para leitores de tela.
 
 Elementos implementados:
 
