@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Apex | Portal de Fórmula 1</title>
+</head>
+
+<body>
+    <!-- 1. CABEÇALHO, BARRA DE PESQUISA E CONTROLES DE ACESSIBILIDADE -->
+    <header>
+        <h1>F1 APEX</h1>
+        <p>O seu portal de telemetria, pilotos e bastidores da Fórmula 1.</p>
+
+        <!-- Barra de Pesquisa -->
+        <section aria-label="Pesquisa no site">
+            <form action="#pilotos" method="get">
+                <label for="campo-pesquisa">Pesquisar piloto ou equipe:</label>
+                <input type="search" id="campo-pesquisa" name="q" placeholder="Ex: Verstappen, Ferrari...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <!-- Controles de Acessibilidade e Navegação -->
+        <nav aria-label="Menu de acessibilidade e acesso">
+            <ul>
+                <li><a href="#destaques">Destaques (Carrossel)</a></li>
+                <li><a href="#pilotos">Pilotos e Equipes</a></li>
+                <li><a href="#glossario">Conceitos Técnicos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#login">Área de Login</a></li>
+            </ul>
+
+            <!-- Botões que ganharão função no JavaScript na Versão 3 -->
+            <div role="group" aria-label="Controles de Acessibilidade">
+                <button type="button" id="btn-aumentar-fonte">A+ (Aumentar Fonte)</button>
+                <button type="button" id="btn-diminuir-fonte">A- (Diminuir Fonte)</button>
+                <button type="button" id="btn-tema">Alternar Modo Claro / Escuro</button>
+            </div>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+
+        <!-- 2. CARROSSEL DE IMAGENS -->
+        <section id="destaques" aria-label="Carrossel de Destaques da Temporada">
+            <h2>Destaques da Temporada</h2>
+
+            <!-- Slide 1 -->
+            <article>
+                <!-- O atributo 'alt' descreve a imagem para deficientes visuais (WCAG) -->
+                <img src="img/carrossel-largada.jpg" alt="Carros de Fórmula 1 alinhados no grid de largada antes da corrida" width="600">
+                <h3>Disputa Milimétrica pelo Campeonato</h3>
+                <p>As principais equipes trazem atualizações aerodinâmicas decisivas para a reta final.</p>
+            </article>
+
+            <!-- Slide 2 -->
+            <article>
+                <img src="img/carrossel-pitstop.jpg" alt="Mecânicos realizando troca rápida de pneus durante um pit stop" width="600">
+                <h3>A Precisão dos Pit Stops</h3>
+                <p>Como equipes trocam quatro pneus em menos de 2 segundos sob pressão extrema.</p>
+            </article>
+
+            <!-- Controles de navegação do carrossel -->
+            <div>
+                <button type="button" id="btn-anterior">Anterior</button>
+                <button type="button" id="btn-proximo">Próximo</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- 3. CARTÕES DE PILOTOS E EQUIPES -->
+        <section id="pilotos" aria-label="Cartões de Pilotos e Equipes">
+            <h2>Grid Principal: Pilotos e Equipes</h2>
+
+            <!-- Cartão 1: Max Verstappen / Red Bull -->
+            <article>
+                <img src="img/verstappen-redbull.jpg" alt="Foto de Max Verstappen" width="300">
+                <h3>Max Verstappen</h3>
+                <p><strong>Equipe:</strong> Oracle Red Bull Racing</p>
+                <p><strong>Carro:</strong> RB20 | <strong>Número:</strong> #1</p>
+                <p>Conhecido pela agressividade controlada, ritmo de corrida constante e domínio técnico.</p>
+            </article>
+
+            <!-- Cartão 2: Charles Leclerc / Ferrari -->
+            <article>
+                <img src="img/leclerc-ferrari.jpg" alt="Foto de Charles Leclerc" width="300">
+                <h3>Charles Leclerc</h3>
+                <p><strong>Equipe:</strong> Scuderia Ferrari</p>
+                <p><strong>Carro:</strong> SF-24 | <strong>Número:</strong> #16</p>
+                <p>Especialista em voltas rápidas de classificação e principal nome da tradicional equipe italiana.</p>
+            </article>
+
+            <!-- Cartão 3: Lewis Hamilton / Mercedes -->
+            <article>
+                <img src="img/hamilton-mercedes.jpg" alt="Foto de Lewis Hamilton" width="300">
+                <h3>Lewis Hamilton</h3>
+                <p><strong>Equipe:</strong> Mercedes-AMG Petronas F1 Team</p>
+                <p><strong>Carro:</strong> W15 | <strong>Número:</strong> #44</p>
+                <p>Heptacampeão mundial, referência histórica em gestão de pneus e pilotagem sob chuva.</p>
+            </article>
+
+            <!-- Cartão 4: Lando Norris / McLaren -->
+            <article>
+                <img src="img/norris-mclaren.jpg" alt="Foto de Lando Norris" width="300">
+                <h3>Lando Norris</h3>
+                <p><strong>Equipe:</strong> McLaren Formula 1 Team</p>
+                <p><strong>Carro:</strong> MCL38 | <strong>Número:</strong> #4</p>
+                <p>Lidera a nova geração da McLaren com velocidade consistente em circuitos de alta downforce.</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!--4. CARTÕES EXPLICATIVOS -->
+        <section id="glossario" aria-label="Cartões Explicativos sobre Fórmula 1">
+            <h2>Entenda a Tecnologia da F1 (Cartões Explicativos)</h2>
+
+            <article>
+                <h3>O que é o DRS (Drag Reduction System)?</h3>
+                <p>É um sistema hidráulico que abre uma aba na asa traseira do carro. Isso reduz a resistência do ar (arrasto) nas retas, aumentando a velocidade final em até 15 km/h para facilitar ultrapassagens.</p>
+            </article>
+
+            <article>
+                <h3>Como funciona a estratégia de Undercut?</h3>
+                <p>Ocorre quando um piloto entra nos boxes uma volta antes do seu rival direto. Com pneus novos e mais aderentes, ele faz uma volta muito rápida e assume a posição quando o rival faz sua parada.</p>
+            </article>
+
+            <article>
+                <h3>Compostos de Pneus Pirelli</h3>
+                <p>Os pneus são divididos em Macios (faixa vermelha - mais rápidos, duram menos), Médios (faixa amarela - equilíbrio) e Duros (faixa branca - mais lentos, alta durabilidade).</p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- 5. SEÇÃO DE CONTATO COM FORMULÁRIO -->
+        <section id="contato" aria-label="Formulário de Contato">
+            <h2>Fale com a Equipe de Paddock</h2>
+            <p>Envie dúvidas, sugestões de pautas ou comentários sobre o campeonato.</p>
+
+            <form action="#" method="post">
+                <div>
+                    <label for="nome">Nome Completo:</label><br>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+                </div>
+                <br>
+                <div>
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                </div>
+                <br>
+                <div>
+                    <label for="equipe-favorita">Equipe Favorita:</label><br>
+                    <select id="equipe-favorita" name="equipe">
+                        <option value="ferrari">Scuderia Ferrari</option>
+                        <option value="redbull">Red Bull Racing</option>
+                        <option value="mercedes">Mercedes-AMG</option>
+                        <option value="mclaren">McLaren</option>
+                        <option value="outra">Outra</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="4" cols="40" required placeholder="Escreva sua mensagem..."></textarea>
+                </div>
+                <br>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- 6. PÁGINA / SEÇÃO DE LOGIN -->
+        <section id="login" aria-label="Área de Login">
+            <h2>Acesso Restrito - Área do Fã / Telemetria</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="usuario-login">E-mail ou Usuário:</label><br>
+                    <input type="text" id="usuario-login" name="usuario" required>
+                </div>
+                <br>
+                <div>
+                    <label for="senha-login">Senha:</label><br>
+                    <input type="password" id="senha-login" name="senha" required>
+                </div>
+                <br>
+                <button type="submit">Entrar no Paddock</button>
+            </form>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- 7. RODAPÉ -->
+    <footer>
+        <p><strong>F1 Apex</strong> - Portal Informativo de Fórmula 1.</p>
+        <p>Desenvolvido como Projeto Final de Desenvolvimento de Interfaces - CEUB (2/2026).</p>
+        <p><a href="#topo">Voltar ao topo da página</a></p>
+    </footer>
+
+</body>
+</html>
